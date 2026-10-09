@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>禮物盒</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f2f5;
+            margin: 0;
+        }
+        .gift-container {
+            position: relative;
+            width: 200px;
+            height: 200px;
+        }
+        /* 蝴蝶結 */
+        .bow {
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 40px;
+            z-index: 3;
+        }
+        .bow::before, .bow::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border: 6px solid #e74c3c;
+            border-radius: 50% 50% 0 50%;
+            top: 0;
+        }
+        .bow::before {
+            left: -10px;
+            transform: rotate(-45deg);
+        }
+        .bow::after {
+            right: -10px;
+            transform: scaleX(-1) rotate(-45deg);
+        }
+        /* 禮物蓋 */
+        .gift-lid {
+            position: absolute;
+            top: 0;
+            left: -10px;
+            width: 220px;
+            height: 40px;
+            background-color: #ff6b6b;
+            border-radius: 8px;
+            z-index: 2;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        /* 禮物主體 */
+        .gift-box {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 200px;
+            height: 160px;
+            background-color: #ff5252;
+            border-radius: 0 0 8px 8px;
+            z-index: 1;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        /* 緞帶直條 */
+        .ribbon-vertical {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 200px;
+            background-color: #e74c3c;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="gift-container">
+        <div class="bow"></div>
+        <div class="gift-lid"></div>
+        <div class="ribbon-vertical"></div>
+        <div class="gift-box"></div>
+    </div>
+
+</body>
+</html>
+</div>
+
